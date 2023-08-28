@@ -27,4 +27,4 @@ jobs:
         with:
           context: .docker/wordpress
           push: true
-          tags: boofi/webapp:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest
