@@ -10,8 +10,6 @@ jobs:
   
     steps:
       - uses: actions/checkout@v3
-      - name: Create .env
-        run:  echo 'PORT=${{ secrets.PORT }}' > .env
 
       - name: Run build
         run: docker-compose up -d
