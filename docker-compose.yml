@@ -13,8 +13,8 @@ services:
       - 8000:80    
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: ${MYSQL_USER}
-      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: wpdb
     volumes: 
       - ./wordpress:/var/www/html
@@ -29,9 +29,9 @@ services:
 
     environment:
       MYSQL_DATABASE: wpdb
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: examplepass
+      MYSQL_ROOT_PASSWORD: examplerootpass
     volumes:
       - db:/var/lib/mysql
     networks:
