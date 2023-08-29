@@ -8,10 +8,11 @@ jobs:
   Build:
     runs-on: self-hosted
   
-  step:
-    - uses: actions/checkout@v2
+  steps:
+    - name: Check out the repo
+      uses: actions/checkout@v3
     - name: Create .env
       run:  echo 'PORT=${{ secrets.PORT }}' > .env
 
     - name: Run build
-      run: docker-compose up -d
+        un: docker-compose up -d
